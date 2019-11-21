@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffff"
+        android:textSize="50sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <Button
+                android:id="@+id/a1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제1"
+                android:textAllCaps="false"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제2"
+                android:textSize="16dp"
+
+                >
+
+            </Button>
+
+            <Button
+                android:id="@+id/a3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제3"
+                android:textAllCaps="false"
+                android:textSize="16dp">
+            </Button>
+
+            <Button
+                android:id="@+id/a4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제4"
+                android:textAllCaps="false"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제5"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제6"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제7"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제8"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제9"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제10"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제11"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/a12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="주제12"
+                android:textSize="16dp">
+
+            </Button>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>
