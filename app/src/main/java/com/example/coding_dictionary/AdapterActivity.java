@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class adapter_test3Activity extends BaseAdapter {
+public class AdapterActivity extends BaseAdapter {
     private LayoutInflater inf;
-    private ArrayList<adapter_testActivity> adapter;
+    private ArrayList<InformationActivity> adapter;
     private int layout;
 
-    public adapter_test3Activity(Context context, int layout, ArrayList adapter) {
+    public AdapterActivity(Context context, int layout, ArrayList adapter) {
         inf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.adapter = adapter;
         this.layout = layout;
@@ -44,7 +44,7 @@ public class adapter_test3Activity extends BaseAdapter {
         TextView name = (TextView) convertView.findViewById(R.id.name);
         TextView print = (TextView) convertView.findViewById(R.id.print);
 
-        adapter_testActivity Adapter = adapter.get(pos);
+        InformationActivity Adapter = adapter.get(pos);
         name.setText(Adapter.getName());
         print.setText(Adapter.getPrint());
 

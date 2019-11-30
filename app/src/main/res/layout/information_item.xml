@@ -12,7 +12,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_shape"
-        android:text="주제1"
         android:textAllCaps="false"
         android:textSize="16dp">
 
@@ -27,7 +26,6 @@
         android:layout_below="@+id/name"
         android:background="@drawable/button_shape"
         android:padding="10dp"
-        android:text="주제 1에 대한 설명입니다."
         android:textAllCaps="false"
         android:textSize="16dp">
 

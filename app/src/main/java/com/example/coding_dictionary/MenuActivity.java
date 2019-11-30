@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -14,9 +16,29 @@ public class MenuActivity extends AppCompatActivity {
     Button hide_button2;
     Button hide_button3;
     Button hide_button4;
+    private ArrayList<InformationActivity> test = new ArrayList<InformationActivity>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_menu);
+
+        Intent intent = new Intent(this.getIntent());
+        String Name = intent.getStringExtra("name");
+        TextView nameView = (TextView) findViewById(R.id.main_name);
+        nameView.setText(Name);
+
+        test.add(new InformationActivity("주제 1", "설명 1"));
+        test.add(new InformationActivity("주제 2", "설명 2"));
+        test.add(new InformationActivity("주제 3", "설명 3"));
+        test.add(new InformationActivity("주제 4", "설명 4"));
+        test.add(new InformationActivity("주제 5", "설명 5"));
+
+        AdapterActivity adapter = new AdapterActivity(getApplicationContext(), R.layout.information_item, test);
+
+        ListView listView = (ListView)findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+        /*super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
         Intent intent = new Intent(this.getIntent());
@@ -89,6 +111,6 @@ public class MenuActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
     }
 }

@@ -1,6 +1,6 @@
 package com.example.coding_dictionary;
 
-public class adapter_testActivity {
+public class InformationActivity {
     private String name;
     private String print;
 
@@ -13,7 +13,7 @@ public class adapter_testActivity {
         return print;
     }
 
-    public adapter_testActivity(String name, String print) {
+    public InformationActivity(String name, String print) {
         this.name = name;
         this.print = print;
     }
