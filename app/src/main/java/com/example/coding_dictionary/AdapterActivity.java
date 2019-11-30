@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -42,12 +43,31 @@ public class AdapterActivity extends BaseAdapter {
         }
 
         TextView name = (TextView) convertView.findViewById(R.id.name);
-        TextView print = (TextView) convertView.findViewById(R.id.print);
+        final TextView print = (TextView) convertView.findViewById(R.id.print);
+        Button button = (Button) convertView.findViewById(R.id.name);
 
-        InformationActivity Adapter = adapter.get(pos);
+        final InformationActivity Adapter = adapter.get(pos);
         name.setText(Adapter.getName());
         print.setText(Adapter.getPrint());
+        print.setVisibility(View.GONE);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(print.getVisibility() == View.VISIBLE) {
+                    Adapter.setisOpen(false);
+                    print.setVisibility(View.GONE);
+                }
+                else{
+                    Adapter.setisOpen(true);
+                    print.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
         return convertView;
+
     }
+
 }
