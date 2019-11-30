@@ -27,7 +27,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/android"
+                android:id="@+id/name1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -35,11 +35,10 @@
                 android:background="@drawable/button_shape"
                 android:textAllCaps="false"
                 android:drawableRight="@drawable/andriod_icon"
-                android:text="안드로이드 (Android)"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/c_lang"
+                android:id="@+id/name2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -47,11 +46,10 @@
                 android:background="@drawable/button_shape"
                 android:drawableRight="@drawable/c_lang_icon"
                 android:paddingRight="10dp"
-                android:text="C언어"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/python"
+                android:id="@+id/name3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -60,11 +58,10 @@
                 android:textAllCaps="false"
                 android:drawableRight="@drawable/python_icon"
                 android:paddingRight="10dp"
-                android:text="파이썬 (Python)"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/java"
+                android:id="@+id/name4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -73,18 +70,16 @@
                 android:textAllCaps="false"
                 android:drawableRight="@drawable/java_icon"
                 android:paddingRight="20dp"
-                android:text="자바 (Java)"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/aabc"
+                android:id="@+id/name5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_shape"
                 android:drawableRight="@drawable/andriod_icon"
-                android:text="뭐하지"
                 android:textSize="16dp" />
         </LinearLayout>
 
