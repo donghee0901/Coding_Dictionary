@@ -13,80 +13,37 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button android_button;
-    private Button c_lang_button;
-    private Button python_button;
-    private Button java_button;
-    private Button test_button;
-    private View.OnClickListener android_listener;
-    private View.OnClickListener c_lang_listener;
-    private View.OnClickListener python_listener;
-    private View.OnClickListener java_listener;
-    private View.OnClickListener test_listener;
+    static int count = 0;
+    private ArrayList<InformationActivity> test = new ArrayList<InformationActivity>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
 
-        TextView nameView1 = (TextView) findViewById(R.id.name1);
-        nameView1.setText("안드로이드 (Andriod)");
-        TextView nameView2 = (TextView) findViewById(R.id.name2);
-        nameView2.setText("C언어");
-        TextView nameView3 = (TextView) findViewById(R.id.name3);
-        nameView3.setText("파이썬 (Python)");
-        TextView nameView4 = (TextView) findViewById(R.id.name4);
-        nameView4.setText("자바 (Java)");
-        TextView nameView5 = (TextView) findViewById(R.id.name5);
-        nameView5.setText("뭐하지");
+        Intent intent = new Intent(this.getIntent());
+        String Name = intent.getStringExtra("name");
+        TextView nameView = (TextView) findViewById(R.id.main_name);
+        nameView.setText(Name);
+        String[][] content = new String[100][100];
+        content[0][0] = "안드 1";
+        content[1][0] = "안드 2";
+        content[2][0] = "안드 3";
+        content[3][0] = "안드 4";
+        for (int i = 0; i < content.length; i++) {
+            insert(content[i][0], content[i][1]);
+        }
 
-        android_button = (Button) findViewById(R.id.name1);
-        c_lang_button = (Button) findViewById(R.id.name2);
-        python_button = (Button) findViewById(R.id.name3);
-        java_button = (Button) findViewById(R.id.name4);
-        test_button = (Button) findViewById(R.id.name5);
+        AdapterActivity adapter = new AdapterActivity(getApplicationContext(), R.layout.information_item, test);
 
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(adapter);
 
-        android_listener = new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                intent.putExtra("name","Android");
-                startActivity(intent);
-            }
-        };
-        c_lang_listener = new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                intent.putExtra("name","C언어");
-                startActivity(intent);
-            }
-        };
-        python_listener = new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                intent.putExtra("name","Python");
-                startActivity(intent);
-            }
-        };
-        java_listener = new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                intent.putExtra("name","Java");
-                startActivity(intent);
-            }
-        };
-        test_listener = new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                intent.putExtra("name","뭐하지");
-                startActivity(intent);
-            }
-        };
+    }
 
-        android_button.setOnClickListener(android_listener);
-        c_lang_button.setOnClickListener(c_lang_listener);
-        python_button.setOnClickListener(python_listener);
-        java_button.setOnClickListener(java_listener);
-        test_button.setOnClickListener(test_listener);
+    void insert(String name, String print) {
+        test.add(new InformationActivity(name, print));
+        count++;
+        return;
     }
 }
